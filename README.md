@@ -10,6 +10,15 @@ cardio-specific.
 **No real patient data, sample identifiers, or licensed reference data are included anywhere
 in this repository.** See [`docs/`](docs/) for details.
 
+## Interactive guide (GitHub Pages)
+
+**[toki-bio.github.io/example_workflow](https://toki-bio.github.io/example_workflow/)** — a
+step-by-step walkthrough with live-updating, copy-pasteable commands. Adjust paths, panel, sample
+IDs, and threads in the settings panel; every stage command updates as you type.
+
+To publish the site (one-time): GitHub repo **Settings → Pages → Build and deployment → Deploy
+from branch `main`, folder `/docs`**.
+
 ## Why this exists
 
 DRAGEN (FPGA bitstream + a data-processing subscription) is one way to go from paired-end WGS
@@ -27,6 +36,7 @@ useful background if you're new to this space.
 
 | Path | Contents |
 |---|---|
+| [`docs/index.html`](docs/index.html) | Interactive GitHub Pages guide — stage-by-stage walkthrough with adjustable, copy-pasteable commands |
 | [`docs/DATA_TYPES_AND_WORKFLOWS.md`](docs/DATA_TYPES_AND_WORKFLOWS.md) | Introduction to genomic data types (sequencing vs. array), tool landscape (DRAGEN vs. samtools/GATK vs. PLINK, etc.), and goal/tier matrix — what's implemented here vs. roadmap |
 | [`docs/ORIGINAL_DRAGEN_PIPELINE.md`](docs/ORIGINAL_DRAGEN_PIPELINE.md) | Case study: reconstruction of a real FPGA-accelerated DRAGEN pipeline, as run in production |
 | [`docs/DRAGEN_TO_OSS_MAPPING.md`](docs/DRAGEN_TO_OSS_MAPPING.md) | Stage-by-stage table mapping each DRAGEN feature to its open-source replacement |
