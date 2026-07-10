@@ -1,0 +1,2 @@
+case1	case	fastq/case1_R1.fastq.gz	fastq/case1_R2.fastq.gz
+control1	control	fastq/control1_R1.fastq.gz	fastq/control1_R2.fastq.gz
