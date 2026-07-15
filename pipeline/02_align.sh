@@ -29,6 +29,9 @@ bwa mem -t "$THREADS" \
   "$TMP_DIR/${sample_id}.trim_R1.fastq.gz" "$TMP_DIR/${sample_id}.trim_R2.fastq.gz" \
   | samtools view -@ "$THREADS" -b -o "$bam_raw" -
 
+log "[$sample_id] fixmate (required before markdup)"
+samtools fixmate -m -@ "$THREADS" "$bam_raw" "$TMP_DIR/${sample_id}.fixmate.bam"
+mv "$TMP_DIR/${sample_id}.fixmate.bam" "$bam_raw"
 log "[$sample_id] sort"
 samtools sort -@ "$THREADS" -o "$bam_sorted" "$bam_raw"
 
